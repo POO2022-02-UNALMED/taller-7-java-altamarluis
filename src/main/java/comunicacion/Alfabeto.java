@@ -5,18 +5,17 @@
  */
 package comunicacion;
 
-import java.util.ArrayList;
 
 /**
  *
  * @author LENOVO
  */
 public class Alfabeto extends Pictograma{
-    private ArrayList <String> letras = new ArrayList();
+    private String[] letras;
     private String interpretacion;
     
     
-    public Alfabeto(String a, ArrayList<String> b, String c){
+    public Alfabeto(String a, String[] b, String c){
         super(a);
         letras = b;
         interpretacion = c;
@@ -29,11 +28,11 @@ public class Alfabeto extends Pictograma{
     }
     
     public int cantidadLetras(){
-        return letras.size();
+        return letras.length;
     }
     
     
-    public ArrayList<String> getLetras(){
+    public String[] getLetras(){
         return letras;
     }
     @Override
@@ -42,7 +41,7 @@ public class Alfabeto extends Pictograma{
     }
     
     
-    public void setLetras(ArrayList<String> i){
+    public void setLetras(String[] i){
         letras = i;
     }
     

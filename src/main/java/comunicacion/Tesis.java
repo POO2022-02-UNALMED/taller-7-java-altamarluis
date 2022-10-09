@@ -1,24 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package comunicacion;
 
-import java.util.ArrayList;
 
-/**
- *
- * @author LENOVO
- */
 public class Tesis extends Escrito{
     private String idea;
-    private ArrayList<String> argumentos = new ArrayList();
+    private String[] argumentos;
     private String conclusion;
     private String referencias;
     private String interpretacion;
     
-    public Tesis(String o, String a, String b, int c, String d, ArrayList<String> l, String e, String f, String g){
+    public Tesis(String o, String a, String b, int c, String d, String[] l, String e, String f, String g){
         super(o, a, b, c);
         idea = d;
         argumentos = l;
@@ -32,7 +23,7 @@ public class Tesis extends Escrito{
     public String toString(){
         String r = super.resumen() + "\n";
 		r += idea + "\n";
-		r += argumentos.size();
+		r += argumentos.length;
 		r += conclusion + "\n";
                 r += referencias;
 		return  r;
@@ -48,7 +39,7 @@ public class Tesis extends Escrito{
         return idea;
     }
     
-    public ArrayList<String> getArgumentos(){
+    public String[] getArgumentos(){
         return argumentos;
     }
     
@@ -70,7 +61,7 @@ public class Tesis extends Escrito{
         idea = i;
     }
     
-    public void setArgumentos(ArrayList<String> i){
+    public void setArgumentos(String[] i){
         argumentos = i;
     }
     
